@@ -1,7 +1,11 @@
 package com.example.demo.model;
 
+import lombok.Data;
+
 import javax.persistence.*;
 
+@Entity
+@Data
 public class Publicacion {
     @Id
     @SequenceGenerator(name = "Publicacion_seq",
@@ -10,7 +14,7 @@ public class Publicacion {
     @GeneratedValue(strategy = GenerationType.SEQUENCE,
             generator = "Publicacion_seq")
 
-    private Long idPublicacion;
+    private Long id;
     private Long idUsuario;
     private Long idProducto;
     private Long idPago;

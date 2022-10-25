@@ -13,7 +13,7 @@ import java.util.List;
 @CrossOrigin
 
 public class ControllerPublicacion {
-    @Qualifier("IServicePublicacion")
+    @Qualifier("servicePublicacion")
     @Autowired
     private IServicePublicacion service;
 
@@ -32,7 +32,7 @@ public class ControllerPublicacion {
         return service.findById(id);
     }
 
-    @DeleteMapping("/{id")
+    @DeleteMapping("/{id}")
     public void deletePublicacion(@PathVariable Long id) {
         service.deletePublicacion(id);
     }
