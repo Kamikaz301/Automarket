@@ -3,11 +3,13 @@ package com.example.demo.service;
 import com.example.demo.model.Publicacion;
 import com.example.demo.repository.IPublicacionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@Component("servicePublicacion")
 public class ImpServicePublicacion implements IServicePublicacion {
     @Autowired
     private IPublicacionRepository repo;
